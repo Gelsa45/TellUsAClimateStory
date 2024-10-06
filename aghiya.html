@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Story</title>
+    <!-- Adding Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset some basic styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+            /* Set a default background image that can be easily changed */
+            background-image: url('https://www.example.com/path-to-your-image.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        header {
+            background-color: rgba(0, 0, 50, 0.8);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        header .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Home section styling */
+        #home {
+            padding: 120px 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 50, 0.7);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #home h1 {
+            font-size: 3.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        #home p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        #home .button {
+            background-color: #ff4500;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 10px rgba(255, 69, 0, 0.8);
+        }
+
+        #home .button:hover {
+            background-color: #e03d00;
+        }
+
+        /* Story section */
+        #story {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 50, 0.9);
+            color: white;
+        }
+
+        #story h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .animation {
+            margin: 20px auto;
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            background-color: #222;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.6);
+        }
+
+        /* About section */
+        #about {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 70, 0.85);
+        }
+
+        #about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #ffdd57;
+        }
+
+        #about p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: rgba(0, 0, 30, 0.8);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        footer .socials a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer .socials a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+            }
+
+            .animation {
+                height: 250px;
+            }
+
+            #home h1 {
+                font-size: 2.5rem;
+            }
+
+            #home p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Climate Story</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#story">Story</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="index.html">Statistics</a></li> <!-- Link to statistics page -->
+                <li><a href="carbon-footprint.html">Carbon Footprint</a></li> <!-- New link to carbon-footprint.html -->
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to Our Climate Story</h1>
+        <p>Explore the Earth's climate changes through the eyes of the cosmos.</p>
+        <a href="#story" class="button">Start the Story</a>
+        <a href="index.html" class="button">Explore Statistics</a> <!-- Button to go to statistics page -->
+        <a href="carbon-footprint.html" class="button">Learn About Carbon Footprint</a> <!-- New button for Carbon Footprint -->
+    </section>
+
+    <section id="story">
+        <h2>Our Climate Journey</h2>
+        <div class="story-content">
+            <p>Climate change is no longer a distant concern—it's an undeniable reality that is reshaping our world.</p>
+            <p>Rising temperatures, melting ice caps, and more extreme weather patterns are all signs that the Earth's climate is changing at an unprecedented rate.</p>
+            <p>But how do we truly understand the scale of this challenge? The answer lies in the data.</p>
+            <p>Using data from the U.S. Greenhouse Gas (GHG) Center, we can explore how human activities have driven changes in our atmosphere, contributing to global warming.</p>
+            <p>Through visualizations and scientific analysis, our goal is to break down the complex phenomenon of climate change into an accessible story that anyone can understand—and act upon.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About the Project</h2>
+        <p>This project is part of NASA Space Apps Hackathon, aimed at raising awareness about climate change.</p>
+    </section>
+
+    <footer>
+        <p>Created by BYTECLUB - NASA Space Apps Hackathon 2024</p>
+        <div class="socials">
+            <a href="#">Twitter</a>
+            <a href="#">GitHub</a>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript Code for canvas animation
+        const canvas = document.getElementById('climate-animation');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = 400;
+
+        // Sample canvas animation code (You can modify or add climate-specific animations)
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+            for (let i = 0; i < 50; i++) {
+                ctx.beginPath();
+                let x = Math.random() * canvas.width;
+                let y = Math.random() * canvas.height;
+                let radius = Math.random() * 3;
+                ctx.arc(x, y, radius, 0, Math.PI * 2);
+                ctx.fill();
+            }
+            requestAnimationFrame(draw);
+        }
+        draw();
+    </script>
+</body>
+</html>

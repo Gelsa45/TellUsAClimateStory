@@ -1,0 +1,101 @@
+/* General styling */
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Changed to black to match the background */
+    color: #fff; /* Text color set to white for contrast */
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Header styling */
+header {
+    background-color: rgba(0, 0, 50, 0.8); /* Slightly lighter to match the theme */
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    animation: bounceIn 1.5s ease-out;
+}
+
+h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Added shadow for better visibility */
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Dropdown Section */
+#dropdown-section {
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 50, 0.7); /* Changed background for dropdown */
+}
+
+#dropdown-section select {
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.8); /* Changed to white */
+    color: rgba(0, 0, 50, 0.7); /* Changed text color to white */
+}
+
+/* Data Visuals */
+#data-visuals {
+    padding: 40px;
+    text-align: center;
+    background-color: rgba(0, 0, 50, 0.7); /* Matching background for consistency */
+}
+
+#data-visuals h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffdd57; /* Keeping a contrasting color for the header */
+}
+
+#data-visuals canvas {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Footer Styling */
+footer {
+    background-color: rgba(0, 0, 30, 0.8); /* Adjusted for consistency */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Keyframe animations */
+@keyframes slideIn {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Canvas for Stars */
+canvas#starCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Send it to the back */
+}

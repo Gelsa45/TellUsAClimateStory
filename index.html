@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO₂ Concentration Story</title>
+
+    <!-- Include GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+
+    <!-- Include Chart.js for data visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="starCanvas"></canvas>
+    <header>
+        <h1>CO₂ Concentration and Climate Story</h1>
+        <p>Explore the rise of CO₂ emissions across various regions</p>
+    </header>
+
+    <section id="dropdown-section">
+        <h2>Select a Country to Explore CO₂ Concentration</h2>
+        <select id="country-dropdown" onchange="updateCountryData()">
+            <option value="none">-- Select a Country --</option>
+            <option value="Australia">Australia</option>
+            <option value="Finland">Finland</option>
+            <option value="Israel">Israel</option>
+            <option value="Hungary">Hungary</option>
+            <option value="France">France</option>
+            <option value="UK">UK</option>
+            <option value="Greenland">Greenland</option>
+            <option value="Namibia">Namibia</option>
+        </select>
+    </section>
+
+    <section id="data-visuals">
+        <h2 id="country-title">Global CO₂ Emissions</h2>
+        <canvas id="co2Chart"></canvas>
+    </section>
+
+    <footer>
+        <p>NASA Space Apps Challenge | Climate Story | 2024</p>
+    </footer>
+
+    <!-- Link to JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>

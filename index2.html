@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Story</title>
+    <style>
+        /* CSS Code */
+        /* Reset some basic styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #eef;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #006994;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Home section styling */
+        #home {
+            padding: 100px 20px;
+            text-align: center;
+            background-color: #0074D9;
+            color: white;
+        }
+
+        #home .button {
+            background-color: #ff4500;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        #home .button:hover {
+            background-color: #e03d00;
+        }
+
+        /* Story section */
+        #story {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .animation {
+            margin: 20px auto;
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            background-color: #ddd;
+        }
+
+        /* About section */
+        #about, #resources {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #004466;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer .socials a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer .socials a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+            }
+
+            .animation {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Climate Story</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#story">Story</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#resources">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to Our Climate Story</h1>
+        <p>Explore how climate change is affecting the planet through a visual journey.</p>
+        <a href="#story" class="button">Start the Story</a>
+    </section>
+
+    <section id="story">
+        <h2>Our Climate Journey</h2>
+        <div class="animation">
+            <canvas id="climate-animation"></canvas>
+        </div>
+        <p>This animation showcases the impacts of climate change, from rising sea levels to melting glaciers.</p>
+    </section>
+
+    <section id="about">
+        <h2>About the Project</h2>
+        <p>This project is part of NASA Space Apps Hackathon, aimed at raising awareness about climate change.</p>
+    </section>
+
+    <section id="resources">
+        <h2>Additional Resources</h2>
+        <ul>
+            <li><a href="https://climate.nasa.gov/">NASA Climate Change</a></li>
+            <li><a href="https://www.ipcc.ch/">IPCC Reports</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Created by [Your Team Name] - NASA Space Apps Hackathon 2024</p>
+        <div class="socials">
+            <a href="#">Twitter</a>
+            <a href="#">GitHub</a>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript Code
+        const canvas = document.getElementById('climate-animation');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = 400;
+
+        let seaLevel = canvas.height - 50;
+
+        function drawSea() {
+            ctx.fillStyle = '#00f';
+            ctx.fillRect(0, seaLevel, canvas.width, canvas.height - seaLevel);
+        }
+
+        function animateSeaLevel() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            seaLevel -= 0.5; // Increase this value to speed up the animation
+            if (seaLevel < canvas.height - 200) seaLevel = canvas.height - 50; // Reset sea level after certain height
+            drawSea();
+            requestAnimationFrame(animateSeaLevel);
+        }
+
+        drawSea();
+        animateSeaLevel();
+    </script>
+</body>
+</html>
